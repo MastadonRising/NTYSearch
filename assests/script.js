@@ -13,13 +13,23 @@ $.ajax({
     url: queryURL,
     method: "GET"
   }).then(function(response) {
-      console.log(response.response.docs[0])
-    console.log(response.response.docs[0].headline.main);
-    console.log(response.response.docs[0].abstract);
+     console.log(response.response.docs[0])
+     console.log(response.response.docs[0].headline.main);
+     console.log(response.response.docs[0].abstract);
 
-    for (var i = 0; i < numofRec.length; i++) {
+    for (var i = 0; i < numofRec; i++) {
         var container = document.createElement("div");
+        var containerBody = document.createElement("div");
+        var header = document.createElement("h5");
+        var para = document.createElement("p");
+        header.classList.add("mt-0");
+        header.innerHTML = response.response.docs[i].headline.main;
+        containerBody.classList.add("media-body");
         container.classList.add("media");
+        para.innerHTML = response.response.docs[0].abstract;
         wrapper.insertBefore(container, footer);
+        container.appendChild(containerBody);
+        containerBody.appendChild(header);
+        containerBody.appendChild(para);
     }
   })
