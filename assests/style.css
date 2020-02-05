@@ -1,20 +1,37 @@
-.header {
-    width: 100%;
-    text-align: center;
-}
-
-.headerTitle {
-    font-size: calc(1em + 3.5vw);
-}
-.searchBox {
+.wrapper {
     width: 100%;
     max-width: 1200px;
     margin: auto;
 }
-.searchBox * {
-
-    margin: auto;
+.header {
+    background-color: #002080;
+    padding: 15px;
 }
-.searchBox button {
-    width: auto;
+.headerTitle {
+    font-size: calc(1em + 3vw);
+    text-align: center;
+    color: #f3f3f3;
+}
+.searchBox {
+    width: 80%;
+    margin: auto;    
+}
+h3 {
+    background-color: #e4e4e4;
+}
+.inputForm  * {
+    width: 100%;
+    margin: 5px 0;
+}
+.articleBox,
+.footer {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
 }
