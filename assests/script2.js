@@ -3,7 +3,7 @@
         event.preventDefault()
         
         var searchTerm = $('.searchTerm').val();
-        // var recordCount = $('.recordCount').val();
+        var recordCount = $('#recordCount').val();
     
     // https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=yourkey
     
@@ -16,7 +16,7 @@
         method: "GET"
       }).then(function(response) {
         console.log(response);
-    
+        
       })
     })
 
